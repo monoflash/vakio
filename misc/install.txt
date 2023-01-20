@@ -1,0 +1,24 @@
+Документ с данными которые поэже будут перенесены в документацию.
+
+
+## Исталяция сервера
+## На единственно поддерживаемый Home Assistant debian linux.
+go install github.com/monoflash/vakio/server@latest
+В $GOBIN появится файл server.
+Переименовать файл server в vakio и поместить например в директорию: /usr/local/sbin/vakio
+Скопировать файлы misc/vakio.service, misc/vakio.socket, misc/vakio.target в директорию: /etc/systemd/system
+Проверить правильность и отредактировать содержимое этих файлов.
+Скопировать файл misc/vakio.sysconfig в файл /etc/defaults/vakio
+Внести в файл корректные данные доступа в MQTT и host/ip на котором будет запущен сервер.
+Скопировать файл misc/vakio.tmpfilesd в файл: /usr/lib/tmpfiles.d/vakio.conf
+
+Настройка сервиса на автоматический запуск:
+systemct enable vakio.service
+systemctl start vakio.service
+
+Добавить пользователя из под которого будет работать сервис:
+groupadd -r vakio
+useradd -g vakio -m -d /usr/share/vakio -r vakio
+
+## Разрешение пингов на сервере:
+sysctl -w net.ipv4.ping_group_range="0 1000"
