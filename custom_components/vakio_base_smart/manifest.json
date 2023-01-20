@@ -1,0 +1,17 @@
+{
+  "domain": "vakio_base_smart",
+  "name": "Vakio BASE Smart",
+  "config_flow": true,
+  "documentation": "https://github.com/monoflash/vakio",
+  "issue_tracker": "https://github.com/monoflash/vakio/issues",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [],
+  "codeowners": [
+    "@monoflash"
+  ],
+  "iot_class": "cloud_polling",
+  "version": "1.0.0"
+}
