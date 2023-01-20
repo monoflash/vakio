@@ -2,8 +2,8 @@ from __future__ import annotations
 import decimal
 import logging
 
+# from homeassistant.components.sensor.const import SensorDeviceClass
 from homeassistant.components.sensor import SensorEntity
-from homeassistant.components.sensor.const import SensorDeviceClass
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
@@ -42,7 +42,8 @@ class VakioSensorEntity(SensorEntity):
         self._attr_unique_id = unique_id
         self._attr_name = name
         self._entity_id = entry_id
-        self._attr_device_class = SensorDeviceClass.BATTERY
+        # self._attr_device_class = SensorDeviceClass.BATTERY
+        self._attr_device_class = "battery"
         self.coordinator = coordinator
 
     @property
