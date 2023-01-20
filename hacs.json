@@ -1,0 +1,6 @@
+{
+  "name": "Vakio BASE Smart",
+  "domains": ["sensor", "fan"],
+  "iot_class": "cloud_polling",
+  "homeassistant": "2022.11.0"
+}

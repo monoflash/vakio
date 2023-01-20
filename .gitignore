@@ -1,0 +1,73 @@
+# Скомпилированные объектные файлы, статические и динамические библиотеки (общие объекты)
+*.o
+*.a
+*.so
+
+# IDE
+.project
+.settings
+.idea
+.vscode
+
+# Folders
+_obj
+_test
+_dev
+/logs
+/log
+/storage
+/tmp
+/rpmbuild
+/vendor/self
+
+# Расширения/префиксы, специфичные для архитектуры
+*.[568vq]
+[568vq].out
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+_testmain.go
+
+*.exe
+*.test
+*.prof
+
+## Кеш
+**/__pycache__
+
+# Двоичные файлы
+/bin/
+/pkg/
+
+# Зависимости
+/*.log
+.localpackages
+
+# Конфигурации и т.д...
+/.env.mk
+/cache
+/conf/*.yml
+!/conf/*.yml.example
+!/conf/*.yml.example.yml
+!/conf/*.example.yml
+!/conf/*.example.log.yml
+/conf/keys/*
+!/conf/keys/*.md
+/conf/keys/jwt.private
+/conf/keys/jwt.public
+/conf/keys/server.private
+/conf/keys/server.public
+/run/*.pid
+/run/*.sock
+/run/*.state
+/run/*.bolt.db
+/doc/*.mwb.bak
+/doc/.~lock.*
+nohup.out
+/result.*
+/conf/proxy.txt
+/.config
+/*.txt
