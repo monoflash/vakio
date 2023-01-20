@@ -3,7 +3,7 @@
 """
 import decimal
 import requests
-from ppretty import ppretty
+# from ppretty import ppretty
 import logging
 from datetime import datetime, timedelta, timezone
 from requests.exceptions import HTTPError, ConnectionError
