@@ -1,0 +1,2 @@
+d /run/vakio 0770 vakio vakio
+d /usr/share/vakio 0770 vakio vakio

@@ -1,0 +1,4 @@
+/usr/local/sbin/vakio                              root:root                    0755
+/etc/sysconfig/vakio                               root:root                    0644
+/usr/share/vakio                                   vakio:vakio                  0755
+/var/lib/vakio                                     vakio:vakio                  0755

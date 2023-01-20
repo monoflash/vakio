@@ -1,0 +1,13 @@
+[Unit]
+Description=Vakio socket service
+PartOf=vakio.service
+Requires=vakio.target
+Before=vakio.target
+
+[Socket]
+ListenStream=80
+NoDelay=true
+Service=vakio.service
+
+[Install]
+WantedBy=sockets.target

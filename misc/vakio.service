@@ -1,0 +1,36 @@
+[Unit]
+Description=Vakio service
+DefaultDependencies=no
+# Requires=vakio.socket
+# After=vakio.socket
+After=nss-lookup.target network.target time-sync.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/share/vakio
+EnvironmentFile=/etc/sysconfig/vakio
+ExecStart=/usr/local/sbin/vakio
+PIDFile=/run/vakio/vakio.pid
+Restart=always
+RestartSec=10
+# TimeoutStartSec=40
+# TimeoutStopSec=45
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+KillMode=process
+User=root
+Group=vakio
+NonBlocking=true
+NoNewPrivileges=true
+InaccessibleDirectories=/sys
+PrivateTmp=true
+PrivateDevices=true
+ProtectHome=true
+ProtectSystem=full
+# CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+# AmbientCapabilities=CAP_NET_BIND_SERVICE
+
+[Install]
+WantedBy=multi-user.target
+# Also=vakio.socket
