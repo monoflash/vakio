@@ -54,7 +54,7 @@ async def async_setup_entry(hass: HomeAssistant, conf: ConfigEntry) -> bool:
     hass.data[DOMAIN][conf.entry_id] = coordinator
     conf.add_update_listener(async_reload_entry)
     conf.async_on_unload(conf.add_update_listener(config_entry_update_listener))
-    hass.config_entries.async_setup_platforms(conf, PLATFORMS)
+    await hass.config_entries.async_forward_entry_setups(conf, PLATFORMS)
 
     return True
 
